@@ -37,9 +37,9 @@ class App extends Component {
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
+      let newList = events.slice(0, this.state.numberOfEvents)
       if (this.mounted) {
-        this.setState({locations: extractLocations(events) });
-        this.updateEvents(this.state.locations, this.state.numberOfEvents)
+        this.setState({ events: newList, locations: extractLocations(events) });
       }
     });
   }
