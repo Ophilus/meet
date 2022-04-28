@@ -13,7 +13,7 @@ class App extends Component {
     numberOfEvents: 32
   }
 
-  updateEvents = (location='all', eventCount=this.state.numberOfEvents) => {
+  updateEvents = (location, eventCount=this.state.numberOfEvents) => {
     getEvents().then((events) => {
       const locationEvents = (location === 'all') ?
         events :
