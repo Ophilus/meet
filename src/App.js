@@ -40,7 +40,9 @@ class App extends Component {
       
       if (this.mounted) {
         this.updateEvents(this.state.locations, this.state.numberOfEvents)
-      };
+        this.setState({ locations: extractLocations(this.state.events) });
+      }
+   ;
   }
 
   componentWillUnmount(){
