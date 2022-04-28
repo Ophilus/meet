@@ -18,4 +18,6 @@ describe('<NumberOfEvents /> component', () => {
 			NumberOfEventsWrapper.find('.numberOfEvents').simulate('change', {target: {value: "15"}});
 			expect(NumberOfEventsWrapper.state('numberOfEvents')).toEqual("15");
 		});
+
+
 })
