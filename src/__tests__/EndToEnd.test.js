@@ -3,8 +3,8 @@ import puppeteer from "puppeteer";
 describe("show/hide an event details", () => {
   let browser;
   let page;
+  jest.setTimeout(30000);
   beforeAll(async () => {
-    jest.setTimeout(30000);
     browser = await puppeteer.launch({
       headless: false,
       slowMo: 250, // slow down by 250ms
@@ -30,7 +30,7 @@ describe("show/hide an event details", () => {
     expect(eventDetails).toBeDefined();
   });
   test("User can collapse an event to hide its details", async () => {
-    await page.click(".event .show-details");
+    await page.click(".event .hide-details");
     const eventDetails = await page.$(".event .extra-details");
     expect(eventDetails).toBeNull();
   });
