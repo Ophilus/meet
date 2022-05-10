@@ -51,6 +51,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Meet app</h1>
         <div className="filter">
           Number of events:
           <NumberOfEvents numberOfEvents={this.state.numberOfEvents}
