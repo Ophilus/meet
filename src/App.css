@@ -73,6 +73,12 @@ input[type="number"] {
   color:white;
 }
 
+.filter label{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
 .suggestions {
   width: 250px;
   position: absolute;

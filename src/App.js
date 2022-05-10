@@ -53,11 +53,13 @@ class App extends Component {
       <div className="App">
         <h1>Meet app</h1>
         <div className="filter">
-          <label for="number">Number of events: </label>
+          <label>Number of events: 
           <NumberOfEvents numberOfEvents={this.state.numberOfEvents}
           updateNumberOfEvents={this.updateNumberOfEvents}/>
-          <label for="city">City: </label>
-          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          </label>
+          <label>City: 
+            <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          </label>
         </div>
         <EventList events={this.state.events} />
         
