@@ -200,6 +200,10 @@ input[type="number"] {
   margin: 1rem;
 }
 
+a:hover{
+  color: white;
+}
+
 .google-btn {
   width: 184px;
   height: 42px;
